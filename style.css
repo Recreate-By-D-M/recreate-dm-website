@@ -60,6 +60,29 @@ nav ul li a {
     padding: 40px 20px;
 }
 
+/* Filter Buttons */
+.filter-buttons {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.filter-buttons button {
+    background: #25d366;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.filter-buttons button:hover {
+    background: #1da851;
+}
+
+/* Gallery */
 .gallery-container {
     display: flex;
     flex-wrap: wrap;
@@ -79,22 +102,6 @@ nav ul li a {
 .gallery-item img {
     width: 100%;
     border-radius: 10px;
-}
-
-/* Services Section */
-#services {
-    text-align: center;
-    padding: 40px 20px;
-}
-
-#services ul {
-    list-style: none;
-    padding: 0;
-}
-
-#services ul li {
-    font-size: 1.2em;
-    margin: 10px 0;
 }
 
 /* WhatsApp Chatbox */
@@ -123,12 +130,4 @@ footer {
     padding: 15px 0;
     background: #f8f8f8;
     font-size: 1em;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .gallery-container {
-        flex-direction: column;
-        align-items: center;
-    }
 }
