@@ -33,38 +33,52 @@
     <main>
         <section id="home-gallery">
             <h2>Our Creations</h2>
+
+            <!-- Filter Buttons -->
+            <div class="filter-buttons">
+                <button onclick="filterProducts('denim')">Denim Recycle</button>
+                <button onclick="filterProducts('cloth')">Other Cloth Recycle</button>
+                <button onclick="filterProducts('repair')">Repair/Reuse Cloth</button>
+            </div>
+
             <div class="gallery-container">
-                <div class="gallery-item">
+                <div class="gallery-item denim">
                     <p>Denim Purse</p>
                     <img src="image1.jpg" alt="Denim Purse">
                     <p>Handmade purse crafted from recycled denim jeans.</p>
                     <p>Rs. 150-200/-</p>
                 </div>
-                <div class="gallery-item">
+                <div class="gallery-item denim">
                     <p>Round Shape Side Purse</p>
                     <img src="image2.jpg" alt="Side Purse">
                     <p>Stylish side purse made from upcycled jeans.</p>
                     <p>Rs. 150-200/-</p>
                 </div>
-                <div class="gallery-item">
-                    <p>Tote Bag</p>
-                    <img src="image3.jpg" alt="Tote Bag">
-                    <p>Stylish tote bag made from old jeans.</p>
+                <div class="gallery-item denim">
+                    <p>Denim Tote Bag</p>
+                    <img src="image3.jpg" alt="Denim Tote Bag">
+                    <p>Stylish Denim tote bag made from old jeans.</p>
+                    <p>Rs. 250-300/-</p>
+	</div>
+                 <div class="gallery-item denim">
+                    <p>Denim Tote Bag</p>
+                    <img src="image7.jpg" alt="Denim Tote Bag">
+                    <p>Simple Denim tote bag made from old jeans with 3 layer strongest..</p>
                     <p>Rs. 250-300/-</p>
                 </div>
-                <div class="gallery-item">
+                <div class="gallery-item cloth">
                     <p>Cushion Cover</p>
                     <img src="image4.jpg" alt="Cushion Cover">
                     <p>Designer cushion cover made from old sarees/dresses.</p>
                     <p>Rs. 20-50/-</p>
                 </div>
-                <div class="gallery-item">
+                <div class="gallery-item repair">
                     <p>Elastic in Bedsheet</p>
                     <img src="image5.jpg" alt="Bed Sheet Elastic">
                     <p>Make your bedsheet a comfortable fit with full/corner-fit elastic.</p>
                     <p>Only Corner Rs. 50-80/- | Full Rs. 150-200/-</p>
                 </div>
-                <div class="gallery-item">
+                <div class="gallery-item repair">
                     <p>Cloth Repairing</p>
                     <img src="image6.jpg" alt="Cloth Repairing">
                     <p>Get your clothes repaired as you want.</p>
@@ -73,22 +87,32 @@
             </div>
         </section>
 
-        <section id="services">
-            <h2>Our Services</h2>
-            <ul>
-                <li>Denim purses from old jeans</li>
-                <li>Tote bags from shirts</li>
-                <li>Shopping bags from old clothes</li>
-              <script>
-  function openWhatsApp() {
-    window.open('https://wa.me/919979706219', '_blank');
-  }
-</script>
+        <script>
+            function filterProducts(category) {
+                let items = document.querySelectorAll(".gallery-item");
 
-<div class="chatbox" onclick="openWhatsApp()">
-    <img src="whatsapp.png" alt="Chat with Us">
-    <p>Chat with Us</p>
-</div>
+                items.forEach(item => {
+                    if (item.classList.contains(category) || category === "all") {
+                        item.style.display = "block";
+                    } else {
+                        item.style.display = "none";
+                    }
+                });
+            }
+        </script>
+
+        <script>
+            function openWhatsApp() {
+                window.open('https://wa.me/919979706219', '_blank');
+            }
+        </script>
+
+        <div class="chatbox" onclick="openWhatsApp()">
+            <img src="whatsapp.png" alt="Chat with Us">
+            <p>Chat with Us</p>
+        </div>
+
+    </main>
 
     <footer>
         <p>&copy; 2023 Recreate by D&M</p>
