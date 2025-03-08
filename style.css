@@ -67,9 +67,9 @@ nav ul li a {
 }
 
 .filter-buttons button {
-    background: #92a8d1;
+    background: #25d366;
     color: #fff;
-    border: groove;
+    border: none;
     padding: 10px 20px;
     margin: 5px;
     font-size: 1em;
@@ -130,4 +130,21 @@ footer {
     padding: 15px 0;
     background: #f8f8f8;
     font-size: 1em;
+}
+
+.order-button {
+    display: inline-block;
+    background: #E1306C; /* Instagram color */
+    color: white;
+    padding: 8px 15px;
+    margin-top: 10px;
+    font-size: 1em;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+}
+
+.order-button:hover {
+    background: #C13584; /* Darker Instagram color */
 }
